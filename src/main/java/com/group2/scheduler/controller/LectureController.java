@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.group2.scheduler.entity.LectureEntity;
 import com.group2.scheduler.service.LectureService;
@@ -20,11 +21,6 @@ public class LectureController {
 	@Qualifier("lectureService")
 	private LectureService lectureService;
 	
-	@GetMapping("/detail")
-	public String detail() {
-		return "lecture/detail";
-	}
-	
 	@GetMapping("/list")
 	public String list(Model model) {
 		
@@ -33,6 +29,15 @@ public class LectureController {
 		
 		return "lecture/list";
 	}
+	
+	@GetMapping("/detail")
+	public String detail(@RequestParam("lno") int lno) {
+		
+		lectureService.getDetail(lno);
+		
+		return "lecture/detail";
+	}
+	
 	
 	
 }

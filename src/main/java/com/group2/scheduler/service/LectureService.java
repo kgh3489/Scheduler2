@@ -7,4 +7,6 @@ import com.group2.scheduler.entity.LectureEntity;
 public interface LectureService {
 
 	List<LectureEntity> getList(); //모든 목록
+	
+	LectureEntity getDetail(int lno); //상세 화면
 }
