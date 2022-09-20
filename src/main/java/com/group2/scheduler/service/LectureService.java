@@ -9,4 +9,6 @@ public interface LectureService {
 	List<LectureEntity> getList(); //모든 목록
 	
 	LectureEntity getDetail(int lno); //상세 화면
+	
+	List<LectureEntity> getMyList();
 }

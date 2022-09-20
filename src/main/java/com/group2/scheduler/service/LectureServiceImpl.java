@@ -23,6 +23,7 @@ public class LectureServiceImpl implements LectureService{
 	@Override
 	public LectureEntity getDetail(int lno) {
 		Optional<LectureEntity> result = lectureRepository.findById(lno);
+		
 		if (result.isPresent()) {
 			LectureEntity lectureEntity = result.get();
 			return lectureEntity;
@@ -30,5 +31,11 @@ public class LectureServiceImpl implements LectureService{
 			return null;
 		}
 	}
+
+	@Override
+	public List<LectureEntity> getMyList() {
+		return null;
+	}
+	
 	
 }
