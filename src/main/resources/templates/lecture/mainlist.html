@@ -1,66 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"> <!-- 타임리프 사용 -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 </head>
-<body>
-    <header id ="header" >
-        <div id = "topimg"><a href ="###"><img  src="https://ifh.cc/g/G0NM4j.png' border='0'" width = "130" height = "40" alt="사이트로고"></div></a>          
-        <div id = "toptext">강의리스트</div>
-        <div id ="hr">
-            <a href="###">🔐로그인</a>
-            <a href="###">🕵️‍♀️ 회원가입</a>
-        </div>
-         
-            
-    </header>
-    <div class="container">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr id = "table_top">
-                        <th scope="col">날짜</th>
-                        <th scope="col">시간</th>
-                        <th scope="col">강의명</th>
-                        <th scope="col">강사</th>
-                        <th scope="col">수강인원</th>
-                        <th scope="col">수강신청</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="contents">
-                        <td class="noBorder">44.9</td>
-                        <td class="noBorder">Mark</td>
-                        <td class="noBorder">Otto</td>
-                        <td class="noBorder">88</td>
-                        <td class="noBorder">Otto</td>
-                        <td class="noBorder">88</td>
-                    </tr>
-                    <tr id="contents">
-                        <td class="noBorder">44.9</td>
-                        <td class="noBorder">Mark</td>
-                        <td class="noBorder">Otto</td>
-                        <td class="noBorder">88</td>
-                        <td class="noBorder">Otto</td>
-                        <td class="noBorder">88</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <footer id = "footer">
-        <a href="###"><div>이용약관</div></a>
-        <a href="###"><div>개인정보 처리방침</div></a>
-        <a href="###"><div>운영적책</div></a>
-        <a href="###"><div>고객센터</div></a>
-        <a href="###"><div>공지사항</div></a>
-    </footer>
-</body>
-</html>
 <style>
     @font-face {
     font-family: 'Cafe24Ssurround';
@@ -126,7 +71,7 @@
     }
 
     #table_top {
-        height: 100px;
+        height: 50px;
         
     }
 
@@ -179,11 +124,56 @@
         height: 50px;
         
     }
-
+    
+	#lno {text-decoration: none; color: cornflowerblue;}
+	
     a { text-decoration: none; color: black; }
     a:visited { text-decoration: none; }
     a:hover { text-decoration: none; }
     a:focus { text-decoration: none; }
     a:hover, a:active { text-decoration: none; }  
-
 </style>
+<body>
+    <header id ="header" >
+        <div id = "topimg"><a href="###"><img  src="https://ifh.cc/g/G0NM4j.png' border='0'" width = "130" height = "40" alt="사이트로고"></a></div>
+        <div id = "toptext">강의리스트</div>
+        <div id ="hr">
+            <a href="lecture/mypage">🕵️‍♀???님 환영합니다.</a>
+            <a href="../user/logout">🔐로그아웃</a>
+        </div>
+         
+            
+    </header>
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr id = "table_top">
+                        <th scope="col">요일</th>
+                        <th scope="col">시간</th>
+                        <th scope="col">강의명</th>
+                        <th scope="col">강사</th>
+                        <th scope="col">설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="vo : ${list}" id="contents">
+                        <td class="noBorder">[[${vo.day}]]</td>
+                        <td class="noBorder">[[${vo.time}]]</td>
+                        <td class="noBorder">[[${vo.title}]]</td>
+                        <td class="noBorder">[[${vo.tutor}]]</td>
+                        <td class="noBorder"><a id="lno" th:href="@{detail(lno=${vo.lno})}">상세페이지로...</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer id = "footer">
+        <a href="###"><div>이용약관</div></a>
+        <a href="###"><div>개인정보 처리방침</div></a>
+        <a href="###"><div>운영적책</div></a>
+        <a href="###"><div>고객센터</div></a>
+        <a href="###"><div>공지사항</div></a>
+    </footer>
+</body>
+</html>
