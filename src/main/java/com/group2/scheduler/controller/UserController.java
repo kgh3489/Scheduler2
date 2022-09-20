@@ -64,8 +64,8 @@ public class UserController {
 			return "redirect:/user/main";
 		} else {
 			
-			session.setAttribute("userId", userInfo.getId());
-			return "user/main"; // 경로 지정 필요
+			session.setAttribute("userName", userInfo.getName());
+			return "lecture/mainlist";
 		}
 		
 	}
