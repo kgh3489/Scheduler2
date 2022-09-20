@@ -1,0 +1,25 @@
+user 테이블 
+lecture 테이블
+조인은 나중에
+
+user = 회원가입
+lecture = 강의 설명
+
+user, lecture 테이블
+============================================
+CREATE TABLE user(	
+	uno int primary key auto_increment,
+	id varchar(50) not null,
+	pw varchar(50) not null,	
+	name varchar(50) not null
+);
+
+CREATE TABLE lecture(
+	lno int primary key auto_increment,
+	day varchar(50) not null,
+	time varchar(50) not null,
+	fixed_num int not null,
+	title varchar(50) not null,
+	tutor varchar(50) not null	
+);
+============================================
