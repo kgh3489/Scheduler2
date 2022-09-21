@@ -40,4 +40,12 @@ public class RegisterServiceImpl implements RegisterService {
 		
 		return registerRepository.CountUp(lectureEntity);
 	}
+	
+	@Override
+	public void lectureDelete(int id) {
+		
+		registerRepository.deleteById(id);
+		
+	}
+	
 }

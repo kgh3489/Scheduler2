@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -23,7 +24,7 @@ public class UserController {
 	public void main() {}
 	
 	// 회원가입
-	@GetMapping("/join")
+	@PostMapping("/join")
 	public String join(UserEntity.Request user,
 					  RedirectAttributes ra) {
 		
@@ -50,7 +51,7 @@ public class UserController {
 	}
 	
 	// 로그인
-	@GetMapping("/login")
+	@PostMapping("/login")
 	public String login(UserEntity user, 
 						HttpSession session,
 						RedirectAttributes ra) {
@@ -67,8 +68,8 @@ public class UserController {
 			session.setAttribute("userId", userInfo.getId());
 			session.setAttribute("uno", userInfo.getUno());
 			session.setAttribute("userName", userInfo.getName());
-			
-			return "lecture/mainlist";
+
+			return "redirect:/lecture/list";
 		}
 		
 	}
