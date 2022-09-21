@@ -40,7 +40,7 @@
 											</div>
 											<a href="#" class="btn mt-4" id="loginBtn">확인</a>
                             				<div class="form-check"> <br>
- 												 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+ 												 <input class="form-check-input" type="checkbox" value="y" name="saveId" id="saveId">
   												 <label class="form-check-label" for="flexCheckDefault"> 아이디저장 </label>
 											</div>
 				      					</div>
@@ -109,4 +109,41 @@
 			alert(msg);
 		} 
 	
+		//아이디저장 기능
+		
+			$("#saveId").change(function() {
+				if ($("#saveId").is(":checked")) {
+					alert("체크박스 체크했음!");
+					
+					//var date = new Date();
+					//date.setTime(date.getTime() + 1 * 60 * 60 * 24 * 1000); //하루
+					
+					//console.log(date);
+					//console.log(date.toGMTString());
+					
+					//체크하고 나서 서브밋 일어날때 생성.
+					//document.cookie = "user=아이디; path=/; expires=" +date.toGMTString();
+					
+				} else {
+					alert("체크박스 체크 해제!");
+				}
+			});
+		
+		//쿠키검사
+		$(document).ready(function() {
+			//console.log(document.cookie.split("; "));
+			
+			document.cookie.split("; ").forEach(function(a, b) {
+				console.log(a, b);
+				if(a.indexOf("user=") != -1) {
+					//user쿠기가 존재함
+					a = a.replace("user=", "");
+					
+					$("#logeId").val(a);
+				}
+			})
+			
+		});
+		
+		
 	</script>

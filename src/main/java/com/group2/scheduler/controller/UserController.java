@@ -1,5 +1,8 @@
 package com.group2.scheduler.controller;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +24,23 @@ public class UserController {
 	
 	// 회원가입, 로그인 페이지
 	@GetMapping("/main")
-	public void main() {}
+	public void main(HttpServletRequest request
+					) {
+		//자바 쿠키
+//		Cookie[] arr = request.getCookies();
+//		
+//		if(arr != null) {
+//			for(Cookie c : arr) {
+//				System.out.println(c.getName());
+//				System.out.println(c.getValue());
+//			}
+//			
+//		}
+
+		
+		
+		
+	}
 	
 	// 회원가입
 	@PostMapping("/join")
