@@ -18,7 +18,7 @@
 </header>
 
 <div id="wrap">
-	<form action="register" method="post">
+	<form action="../register/lecture" method="post">
 		<div class="container w-50" id="box">
 			<input type="hidden" name="lno" th:value="${lecture.lno}"> 
 				<div class="py-5 text-center">
@@ -58,7 +58,7 @@
 					<input type="hidden" name="id" value="${list.id}" >
 					
 			        <button type="submit" id="confirm" class="btn">신청하기</button>
-					<button type="button" id="cancel" class="btn"> 취소하기</button>
+					<button type="button" id="cancel" class="btn" onclick="location.href='list'"> 취소하기</button>
 					
 				</div>
 		</div>
