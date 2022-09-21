@@ -138,7 +138,7 @@
         <div id = "topimg"><a href="###"><img  src="https://ifh.cc/g/G0NM4j.png' border='0'" width = "130" height = "40" alt="사이트로고"></a></div>
         <div id = "toptext">강의리스트</div>
         <div id ="hr">
-            <a href="lecture/mypage">🕵️‍♀ [[${session.userName}]]님 환영합니다.</a>
+            <a th:href="@{mypage(uno=${session.uno})}">🕵️‍♀ [[${session.userName}]]님 환영합니다.</a>
             <a href="../user/logout">🔐로그아웃</a>
         </div>
          
@@ -159,7 +159,7 @@
                 <tbody>
                     <tr th:each="vo : ${list}" id="contents">
                         <td class="noBorder">[[${vo.day}]]</td>
-                        <td class="noBorder">[[${vo.time}]]</td>
+                        <td class="noBorder">[[${vo.startTime}]]:00 ~ [[${vo.endTime}]]:00</td>
                         <td class="noBorder">[[${vo.title}]]</td>
                         <td class="noBorder">[[${vo.tutor}]]</td>
                         <td class="noBorder"><a id="lno" th:href="@{detail(lno=${vo.lno})}">상세페이지로...</a></td>

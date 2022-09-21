@@ -49,7 +49,8 @@ public class LectureController {
 		model.addAttribute("lecture", lecture);
 		
 		//수강 인원
-		int fixedNum = registerService.CountUp(lecture);
+		int fixedNum = 0;
+		fixedNum = registerService.CountUp(lecture);
 		model.addAttribute("fixedNum", fixedNum);
 		
 		//수강 신청 인원이 가능 인원 이상이면 접근 불가

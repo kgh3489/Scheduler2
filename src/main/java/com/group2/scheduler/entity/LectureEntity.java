@@ -31,15 +31,18 @@ public class LectureEntity {
 	@Column(length = 50, nullable = false)
 	private String day;
 	
-	@Column(length = 50, nullable = false)
-	private String time;
+	@Column(length = 10, nullable = false)
+	private String startTime;
+	
+	@Column(length = 10, nullable = false)
+	private String endTime;
 	
 	@Column(length = 50, nullable = false)
 	private String title;
 	
 	@Column(length = 50, nullable = false)
 	private String tutor;
-	
+
 	@Column(nullable = false)
 	private Integer fixedNum;
 }
