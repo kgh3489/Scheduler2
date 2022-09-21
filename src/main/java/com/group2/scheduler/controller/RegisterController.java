@@ -37,4 +37,13 @@ public class RegisterController {
 		return "redirect:/lecture/list";
 	}
 
+	// 강의 삭제
+	@GetMapping("/delete")
+	public String delete(@RequestParam("id") int id) {
+
+		registerService.lectureDelete(id);
+		
+		return "redirect:/lecture/mypage";
+	}
+	
 }

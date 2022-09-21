@@ -36,17 +36,16 @@ public class RegisterServiceImpl implements RegisterService {
 	}
 
 	@Override
-<<<<<<< HEAD
+	public int CountUp(LectureEntity lectureEntity) {
+		
+		return registerRepository.CountUp(lectureEntity);
+	}
+	
+	@Override
 	public void lectureDelete(int id) {
 		
 		registerRepository.deleteById(id);
 		
 	}
 	
-=======
-	public int CountUp(LectureEntity lectureEntity) {
-		
-		return registerRepository.CountUp(lectureEntity);
-	}
->>>>>>> origin/master
 }
