@@ -33,5 +33,12 @@ public class RegisterServiceImpl implements RegisterService {
 		
 		return registerRepository.save(en);
 	}
+
+	@Override
+	public void lectureDelete(int id) {
+		
+		registerRepository.deleteById(id);
+		
+	}
 	
 }
