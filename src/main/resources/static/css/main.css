@@ -1,12 +1,32 @@
 
+
+/* Please ❤ this if you like it! */
+
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+@font-face {
+        font-family: 'KOTRA_BOLD-Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.1/KOTRA_BOLD-Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    * {
+        font-family: 'KOTRA_BOLD-Bold';
+    }
+
+    #toptext {
+        font-size: large;
+    }
+
+
 
 
 body{
-  font-family: 'Nanum Pen Script', Poppins;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.7;
   color: #2e2e2e;
   background-color: #f7f5f1;
@@ -17,8 +37,8 @@ a {
   transition: all 200ms linear;
 }
 a:hover {
-  text-decoration: none;
-}
+    text-decoration: none;
+  }
 .link {
   color: #e6e6e6;
 }
@@ -27,12 +47,13 @@ a:hover {
 }
 p {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.7;
 }
 h4 {
   font-weight: 600;
   color: #ffe07a;
+  
 }
 h6 {
   text-transform: uppercase;
@@ -86,7 +107,7 @@ span {
   left: -10px;
   line-height: 36px;
   text-align: center;
-  font-size: 40px;
+  font-size: 24px;
   transition: all 0.5s ease;
 }
 .checkbox:checked + label:before {
@@ -168,7 +189,7 @@ span {
   width: 100%;
   font-weight: 500;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
@@ -286,4 +307,12 @@ span {
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
+
+
+
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
 
