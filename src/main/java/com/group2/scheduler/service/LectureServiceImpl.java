@@ -33,8 +33,8 @@ public class LectureServiceImpl implements LectureService {
 	}
 
 	@Override
-	public List<LectureEntity> getMyList() {
-		return null;
+	public List<LectureEntity> getMyPage(int uno) {
+		return lectureRepository.getMyPage(uno);
 	}
 
 }

@@ -3,6 +3,7 @@ package com.group2.scheduler.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.group2.scheduler.entity.LectureEntity;
 import com.group2.scheduler.entity.RegisterEntity;
 
 @Service("registerService")
@@ -32,6 +33,19 @@ public class RegisterServiceImpl implements RegisterService {
 //				  .build();
 		
 		return registerRepository.save(en);
+	}
+
+	@Override
+	public int CountUp(LectureEntity lectureEntity) {
+		
+		return registerRepository.CountUp(lectureEntity);
+	}
+	
+	@Override
+	public void lectureDelete(int id) {
+		
+		registerRepository.deleteById(id);
+		
 	}
 	
 }
