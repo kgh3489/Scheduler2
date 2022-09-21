@@ -65,6 +65,8 @@ public class UserController {
 		} else {
 			
 			session.setAttribute("userId", userInfo.getId());
+			session.setAttribute("uno", userInfo.getUno());
+			
 			return "user/main"; // 경로 지정 필요
 		}
 		
