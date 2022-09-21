@@ -64,11 +64,12 @@ public class UserController {
 			
 			return "redirect:/user/main";
 		} else {
-			
+
+			session.setAttribute("userId", userInfo.getId());
+			session.setAttribute("uno", userInfo.getUno());
 			session.setAttribute("userName", userInfo.getName());
-			session.setAttribute("uno", userInfo.getUno());	
-			
-			return "redirect:/lecture/list";
+
+			return "lecture/mainlist";
 		}
 		
 	}

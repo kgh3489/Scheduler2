@@ -1,15 +1,12 @@
 
-
-/* Please ❤ this if you like it! */
-
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 
 body{
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nanum Pen Script', Poppins;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.7;
   color: #2e2e2e;
   background-color: #f7f5f1;
@@ -30,7 +27,7 @@ a:hover {
 }
 p {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.7;
 }
 h4 {
@@ -55,8 +52,8 @@ span {
 .full-height{
   min-height: 100vh;
 }
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked){
+[id="reg-log"]:checked,
+[id="reg-log"]:not(:checked){
   position: absolute;
   left: -9999px;
 }
@@ -89,7 +86,7 @@ span {
   left: -10px;
   line-height: 36px;
   text-align: center;
-  font-size: 24px;
+  font-size: 40px;
   transition: all 0.5s ease;
 }
 .checkbox:checked + label:before {
@@ -171,7 +168,7 @@ span {
   width: 100%;
   font-weight: 500;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 22px;
   letter-spacing: 0.5px;
   outline: none;
