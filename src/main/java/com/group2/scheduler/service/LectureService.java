@@ -10,5 +10,5 @@ public interface LectureService {
 	
 	LectureEntity getDetail(int lno); //상세 화면
 	
-	List<LectureEntity> getMyList();
+	List<LectureEntity> getMyPage(int uno); //마이 페이지
 }
