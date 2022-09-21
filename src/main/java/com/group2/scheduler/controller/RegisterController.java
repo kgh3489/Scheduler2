@@ -25,11 +25,8 @@ public class RegisterController {
 	public String register(HttpSession session,
 						   @RequestParam("lno") int lno,
 						   RedirectAttributes ra) {
-		
+
 		int uno = (int)session.getAttribute("uno");
-		System.out.println("lno" + lno);
-		System.out.println("uno" + uno);
-		
 		
 		registerService.LectureRegister(lno, uno);
 		
@@ -37,4 +34,5 @@ public class RegisterController {
 		
 		return "redirect:/lecture/list";
 	}
+
 }
