@@ -1,3 +1,4 @@
+<!-- 고려할것 내가 수정한 페이지는 <- 버튼을 누르면 회원가입 글씨가 네모 박스를 벗어남-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,58 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/external.css">
-    <link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/main.css"> 
     <script src="../js/jquery-1.12.1.min.js"></script>
-    <style>
-	@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-	
-	</style>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="crossorigin="anonymous"referrerpolicy="no-referrer"/>
+   
+    
     <title>PLAYDATA 수강신청</title>
+<!-- 아이콘 설명 
+"input-icon uil uil-user" : 사람모양
+"input-icon uil uil-lock-alt" : 자물쇠모양
+"input-icon uil uil-user" : @ 모양
+-->
+<style>
+</style>
+
+
 </head>
 <body>
-	
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
-						<h6 class="mb-0 pb-3"><span>로그인 </span><span>회원가입</span></h6>
-						<form name="actionForm" action="####">
+						<a><img  src="https://ifh.cc/g/1j0ndy.png' border='0'" width = "170" height = "50" alt="사이트로고"></h3></a>
+						<h3>UTS 수강신청</h3>
+						<h6 class="mb-0 pb-3"><span>로그인 </span> <i class="fa-solid fa-arrow-down"></i> 클릭! <span>회원가입</span></h6>
+						<form name="actionForm" action="####" method="POST">
 			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
 			          	<label for="reg-log"></label>
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
 								<div class="card-front">
 									<div class="center-wrap">
-										<div class="section text-center">
+										<div class="section text-center"> 
 											<h4 class="mb-4 pb-3">로그인</h4>
 											<div class="form-group">
 												<input type="email" name="id" class="form-style" placeholder="아이디" id="logeId" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
+												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">
 												<input type="password" name="pw" class="form-style" placeholder="비밀번호" id="logPw" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
 											<a href="#" class="btn mt-4" id="loginBtn">확인</a>
-                            				<div class="form-check"> <br>
- 												 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  												 <label class="form-check-label" for="flexCheckDefault"> 아이디저장 </label>
-											</div>
+                            				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">비밀번호찾기</a></p>
 				      					</div>
 			      					</div>
 			      				</div>
 								<div class="card-back">
 									<div class="center-wrap">
 										<div class="section text-center">
-											<h4 class="mb-4 pb-3">회원가입</h4>
+											<h4  class="mb-4 pb-3"><i class="fa-solid fa-users-line"></i><br>회원가입</h4>
 											<div class="form-group">
 												<input type="text" name="idJoin" class="form-style" placeholder="ID를 입력해주세요" id="userId" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">
 												<input type="text" name="nameJoin" class="form-style" placeholder="이름을 입력해주세요" id="userName" autocomplete="off">
-												<i class="input-icon uil uil-at"></i>
+												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">
 												<input type="password" name="pwJoin" class="form-style" placeholder="비밀번호를 입력해주세요" id="pw" autocomplete="off">
@@ -66,7 +73,7 @@
 												<input type="password" name="pwCheck" class="form-style" placeholder="비밀번호를 재입력해주세요" id="pwCheck" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-												<a href="main" class="btn mt-4" id="joinBtn">확인</a>
+												<a href="main" class="btn mt-4" id="joinBtn" style="margin-top: 20px;">확인</a>
 					      				</div>
 				      				</div>
 				      			</div>
@@ -107,6 +114,8 @@
 		var msg = '[[${msg}]]';
 		if (msg != '') {
 			alert(msg);
-		} 
+		}
+
+        
 	
 	</script>
