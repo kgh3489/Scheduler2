@@ -26,7 +26,7 @@
     </header>
 
 <div id="wrap">
-	<form action="register" method="post">
+	<form action="../register/lecture" method="post">
 		<div class="container w-50" id="box">
 			<input type="hidden" name="lno" th:value="${lecture.lno}"> 
 				<div class="py-5 text-center">
@@ -44,7 +44,7 @@
 						<li class="list-group-item d-flex justify-content-between lh-sm">
 							<div>
 								<h6 class="my-0">수업시간</h6>
-							</div> <span class="text-muted">[[${lecture.time}]]</span>
+							</div> <span class="text-muted">[[${lecture.startTime}]]:00 ~ [[${lecture.endTime}]]:00</span>
 						</li>
 						<li class="list-group-item d-flex justify-content-between lh-sm">
 							<div>
@@ -59,15 +59,14 @@
 					</ul>
 					
 					<div class="list-group-item d-flex justify-content-between"><span>수강인원</span>
-	                    <strong>??? / [[${lecture.fixedNum}]]</strong>
+	                    <strong>[[${fixedNum}]] / [[${lecture.fixedNum}]]</strong>
 	                </div>
 	                <br>
 		
 					<input type="hidden" name="id" value="${list.id}" >
 					
 			        <button type="submit" id="confirm" class="btn">신청하기</button>
-					<button type="button" id="cancel" class="btn"> 취소하기</button>
-					
+					<button type="button" id="cancel" class="btn" onclick="location.href='list'"> 취소하기</button>
 				</div>
 		</div>
 	</form>

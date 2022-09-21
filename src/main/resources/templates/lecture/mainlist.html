@@ -158,7 +158,7 @@
         <div id = "topimg"><a href="###"><img  src="https://ifh.cc/g/1j0ndy.png' border='0'" width = "130" height = "40" alt="사이트로고"></a></div>
         <div id = "toptext">강의리스트</div>
         <div id ="hr">
-            <a href="lecture/mypage"><i class="fa-solid fa-user-graduate"></i> [[${session.userName}]]님 환영합니다!&nbsp&nbsp</a>
+            <a th:href="@{mypage(uno=${session.uno})}"><i class="fa-solid fa-user-graduate"></i> [[${session.userName}]]님 환영합니다!&nbsp&nbsp</a>
             <a href="../user/logout"><i class="fa-solid fa-lock-open"></i>로그아웃</a>
         </div>
          
@@ -179,7 +179,7 @@
                 <tbody>
                     <tr th:each="vo : ${list}" id="contents">
                         <td class="noBorder">[[${vo.day}]]</td>
-                        <td class="noBorder">[[${vo.time}]]</td>
+                        <td class="noBorder">[[${vo.startTime}]]:00 ~ [[${vo.endTime}]]:00</td>
                         <td class="noBorder">[[${vo.title}]]</td>
                         <td class="noBorder">[[${vo.tutor}]]</td>
                         <td class="noBorder"><a id="lno" th:href="@{detail(lno=${vo.lno})}">상세페이지로...</a></td>
@@ -196,4 +196,10 @@
         <a href="###"><div>공지사항</div></a>
     </footer>
 </body>
+<script>
+	const msg = '[[${msg}]]';
+	if (msg != '') {
+		alert(msg);
+	} 
+</script>
 </html>

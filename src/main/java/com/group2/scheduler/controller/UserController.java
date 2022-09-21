@@ -68,7 +68,7 @@ public class UserController {
 			session.setAttribute("userId", userInfo.getId());
 			session.setAttribute("uno", userInfo.getUno());
 			session.setAttribute("userName", userInfo.getName());
-			
+
 			return "redirect:/lecture/list";
 		}
 		
