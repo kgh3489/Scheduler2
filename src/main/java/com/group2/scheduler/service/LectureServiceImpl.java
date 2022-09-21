@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.group2.scheduler.entity.LectureEntity;
 
 @Service("lectureService")
-public class LectureServiceImpl implements LectureService{
+public class LectureServiceImpl implements LectureService {
 
 	@Autowired
 	LectureRepository lectureRepository;
@@ -36,6 +36,5 @@ public class LectureServiceImpl implements LectureService{
 	public List<LectureEntity> getMyList() {
 		return null;
 	}
-	
-	
+
 }
