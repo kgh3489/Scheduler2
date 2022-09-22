@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
 	public UserEntity getUserInfo(UserEntity user) {
 		
 
-		UserEntity userInfo = userRepository.findByIdAndPw(user.getId(), user.getPw());
+		UserEntity userInfo = userRepository.checkUserInfo(user.getId());
 		
 		if (userInfo != null) {
 			
