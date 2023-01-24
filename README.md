@@ -50,81 +50,8 @@ TOMCAT 9.0
 
 ```
 파일구조
-C:\
-│  
-│      
-├─bin
-│  ├─main
-│  │  │  
-│  │  ├─com
-│  │  │  └─group2
-│  │  │      └─scheduler
-│  │  │          │ 
-│  │  │          ├─config
-│  │  │          │      InterceptorConfig.class       
-│  │  │          │      
-│  │  │          ├─controller
-│  │  │          │      LectureController.class
-│  │  │          │      RegisterController.class
-│  │  │          │      UserController.class
-│  │  │          │      
-│  │  │          ├─entity
-│  │  │          │      LectureEntity$LectureEntityBuilder.class
-│  │  │          │      LectureEntity.class
-│  │  │          │      RegisterEntity$RegisterEntityBuilder.class
-│  │  │          │      RegisterEntity.class
-│  │  │          │      UserEntity$Request$RequestBuilder.class
-│  │  │          │      UserEntity$Request.class
-│  │  │          │      UserEntity$UserEntityBuilder.class
-│  │  │          │      UserEntity.class
-│  │  │          │      
-│  │  │          ├─service
-│  │  │          │      LectureRepository.class
-│  │  │          │      LectureService.class
-│  │  │          │      LectureServiceImpl.class
-│  │  │          │      RegisterRepository.class
-│  │  │          │      RegisterService.class
-│  │  │          │      RegisterServiceImpl.class
-│  │  │          │      UserRepository.class
-│  │  │          │      UserService.class
-│  │  │          │      UserServiceImpl.class
-│  │  │          │      
-│  │  │          └─util
-│  │  │                  LocaleInterceptor.class
-│  │  │                  LoginSuccessHandler.class
-│  │  │                  
-│  │  ├─static
-│  │  │  ├─css
-│  │  │  │      bootstrap.css
-│  │  │  │      detail.css
-│  │  │  │      external.css
-│  │  │  │      main.css
-│  │  │  │      
-│  │  │  └─js
-│  │  │          jquery-1.12.1.min.js
-│  │  │          
-│  │  └─templates
-│  │      ├─lecture
-│  │      │      detail.html
-│  │      │      mainlist.html
-│  │      │      mypage.html
-│  │      │      
-│  │      └─user
-│  │              main.html
-│  │              
-│  └─test
-│      └─com
-│          └─group2
-│              └─scheduler
-│                      CodeTest.class
-│                      SchedulerApplicationTests.class
-│                      
-├─gradle
-│  └─wrapper
-│          gradle-wrapper.jar
-│          gradle-wrapper.properties
-│          
-└─src
+
+   src
     ├─main
     │  ├─java
     │  │  │  table.txt
